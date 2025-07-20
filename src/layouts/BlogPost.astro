@@ -8,7 +8,7 @@ import { Image } from 'astro:assets';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, nikoImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -20,14 +20,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				max-width: 100%;
 				margin: 0;
 			}
-			.hero-image {
+			.niko-image {
 				width: 100%;
 			}
-			.hero-image img {
+			.niko-image img {
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
+			}
+			.legend {
+				color: #000;
+				text-align: center;
+				text-decoration: underline;
+				font-size: 0.9em;
+				display: block;
+				margin: 0 auto;
 			}
 			.prose {
 				width: 720px;
@@ -59,8 +67,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+				<div class="niko-image">
+					{nikoImage && <Image width={320} height={320} src={nikoImage} alt=""/>}
 				</div>
 				<div class="prose">
 					<div class="title">

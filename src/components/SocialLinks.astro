@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import Youtube from '../assets/youtube.png';
+import Github from '../assets/github.png';
+import Linkedin from '../assets/linkedin.png';
+---
+<div class="social-links">
+		<a href="https://www.youtube.com/@Enzu83" target="_blank">
+			<span class="sr-only">Youtube</span>
+			<Image src={Youtube} alt="youtube" width="32" height="32"/>
+		</a>
+		<a href="https://github.com/Enzu83" target="_blank">
+			<span class="sr-only">GitHub</span>
+			<Image src={Github} alt="youtube" width="32" height="32"/>
+		</a>
+		<a href="https://www.linkedin.com/in/maxime-chambre" target="_blank">
+			<span class="sr-only">LinkedIn</span>
+			<Image src={Linkedin} alt="youtube" width="32" height="32"/>
+		</a>
+	</div>
+
+<style>
+    .social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>
