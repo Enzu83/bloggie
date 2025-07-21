@@ -97,7 +97,7 @@ const posts = (await getCollection('blog')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<a href={`/blog/${post.id}/`}>
+								<a href={`/bloggie/blog/${post.id}/`}>
 									{post.data.mainImage && (
 										<Image width={post.data.mainImage.width} height={post.data.mainImage.height} src={post.data.mainImage} alt="" />
 									)}
