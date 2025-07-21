@@ -98,8 +98,8 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.id}/`}>
-									{post.data.nikoImage && (
-										<Image width={320} height={320} src={post.data.nikoImage} alt="" />
+									{post.data.mainImage && (
+										<Image width={320} height={320} src={post.data.mainImage} alt="" />
 									)}
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
